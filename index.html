@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <div id="header">
+        <ul class="nav">
+            <li class="nav__item"><a href="#">HOME</a></li>
+            <li class="nav__item"><a href="#about">ABOUT</a></li>
+            <li class="nav__item"><a href="#menu">MENU</a></li>
+            <li class="nav__item"><a href="#where">WHERE</a></li>
+        </ul>
+        <div id="mobile-menu" class="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <div id="slider">
+        <p class="slider__title">
+            the
+            <br>
+            Cafe
+        </p>
+        <p class="slider__time padding--124 background--black text--white">Open from 6am to 5am</p>
+        <p class="slider__address padding--124  text--white">15 Adr street, 5015</p>
+    </div>
+
+
+    <!-- Content -->
+    <div id="content">
+        <div class="container" id="about">
+            <div class="content-section" style="max-width: 700px;">
+                <div class="section__heading ">
+                    <h5 class="background--black text--white">ABOUT THE CAFE</h5>
+                </div>
+                <p>The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch
+                    sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+                <div class="section-about-talk">
+                    <p class="talk--one">"Use products from nature for what it's worth - but never too early, nor too
+                        late." Fresh is the new sweet.</p>
+                    <p class="talk--two">Chef, Coffeeist and Owner: Liam Brown</p>
+                </div>
+                <img class="section__img--about img" src="./assets/img/coffeeshop.jpg" alt="Anh coffee" ,style="max-width:1000px">
+                <p class="section-about-open">
+                    <strong>Opening hours: </strong>
+                    everyday from 6m to 5pm.
+                </p>
+                <p class="section-about-address">
+                    <strong>Address: </strong>
+                    15 Adr street 5015 NY
+                </p>
+            </div>
+        </div>
+
+        <div class="container" id="menu">
+            <div class="content-section" style="max-width: 700px;">
+                <div class="section__heading ">
+                    <h5 class="background--black text--white text--white">THE MENU</h5>
+                </div>
+                <div class="section__menu">
+                    <div id="myLink" class="section__menu--eat choice background--grey"
+                        onclick="openMenu(event,'Eat');">Eat</div>
+                    <div class="section__menu--drink choice" onclick="openMenu(event,'Drink');">Drink</div>
+
+                </div>
+                <div class="menu__eat  menu" id="Eat">
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <p class="item-name">Bread Basket</p>
+                            <p class="item-info">Assortment of fresh baked fruit breads and muffins 5.50</p>
+                        </div>
+                        <div class="menu-item">
+                            <p class="item-name">Honey Almond Granola with Fruits</p>
+                            <p class="item-info">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <p class="item-name">Belgian Waffle</p>
+                            <p class="item-info">Vanilla flavored batter with malted flour 7.50</p>
+                        </div>
+                        <div class="menu-item">
+                            <p class="item-name">Scrambled eggs</p>
+                            <p class="item-info">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50
+                            </p>
+                        </div>
+                        <div class="menu-item">
+                            <p class="item-name">Blueberry Pancakes</p>
+                            <p class="item-info">With syrup, butter and lots of berries 8.50</p>
+                        </div>
+                    </div>
+                    <img src="./assets/img/eat-menu.jpg" alt="" class="section__img--menu img">
+
+                </div>
+
+                <div class="menu__drink menu" id="Drink" style="display: none;">
+                    <div class="menu-list">
+                        <div class="menu-item">
+                            <p class="item-name">Coffee</p>
+                            <p class="item-info">Regular coffee 2.50</p>
+                        </div>
+                        <div class="menu-item">
+                            <p class="item-name">Chocolato</p>
+                            <p class="item-info">Chocolate espresso with milk 4.50</p>
+                        </div>
+                        <div class="menu-item">
+                            <p class="item-name">Corretto</p>
+                            <p class="item-info">Whiskey and coffee 5.00</p>
+                        </div>
+                        <div class="menu-item">
+                            <p class="item-name">Iced tea</p>
+                            <p class="item-info">Whiskey and coffee 5.00</p>
+                        </div>
+                        <div class="menu-item">
+                            <p class="item-name">Soda</p>
+                            <p class="item-info">Coke, Sprite, Fanta, etc. 2.50</p>
+                        </div>
+                    </div>
+                    <img src="./assets/img/coffeehouse2.jpg" alt="" class="section__img--menu img">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="where">
+            <div class="content-section" style="max-width: 700px;">
+                <div class="section__heading ">
+                    <h5 class="background--black text--white text--white">WHERE TO FIND US</h5>
+                </div>
+                <p>Find us at some address at some place.</p>
+                <img src="./assets/img/map.jpg" alt="" class="section__img--where img">
+                <p>
+                    <span class="tag background--black text--white">FYI !</span>
+                    We offer full-service catering for any event, large or small. We understand your needs and we will
+                    cater the food to satisfy the biggerst criteria of them all, both look and taste.
+                </p>
+                <p>
+                    <strong>Reserve</strong>
+                    a table, ask for today's special or just send us a message:
+                </p>
+                <form action=""> 
+                    <div class="form-input">
+                        <input type="text" placeholder="Name" required name="Name">
+                    </div>
+                    <div class="form-input">
+                        <input type="number" placeholder="How many people" required name="People">
+                    </div>
+                    <div class="form-input">
+                        <input type="datetime-local" placeholder="Date and time" required name="date"
+                            ,value="2020-11-16T20:00">
+                    </div>
+                    <div class="form-input">
+                        <input type="text" placeholder="Message \ Special requirements" required name="Message">
+                    </div>
+                </form>
+                <button type="submit">
+                    SEND MESSAGE
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>Powered by <a href="">w3.css</a></p>
+    </footer>
+
+
+    <script>
+
+        // Tabbed Menu
+        function openMenu(evt, menuName) {
+            var i, x, tablinks;
+            x = document.querySelectorAll('.menu');//là menu Eat và Drink
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = 'none';
+            }
+            tablinks = document.querySelectorAll('.choice'); //là 2 nút chọn Eat & Drink
+            for (i = 0; i < x.length; i++) {
+                if (tablinks[i].classList.contains('background--grey')) {
+                    tablinks[i].classList.remove('background--grey');
+
+                }
+            }
+            document.getElementById(menuName).style.display = 'block';
+            evt.currentTarget.classList.add('background--grey')
+            
+        }
+        document.getElementById('myLink').click();
+
+
+    </script>
+
+
+    <script>
+
+        var header = document.getElementById('header');  //lấy phần tử header
+        var mobileMenu = document.getElementById('mobile-menu');  //lấy phần tử mobile-menu
+        var headerHeight = header.clientHeight; //lấy chiều cao của header
+        // đóng mở mobile menu bằng nút button
+        mobileMenu.onclick = function () {
+            var isClose = header.clientHeight === headerHeight;
+            if (isClose) {
+                header.style.height = 'auto'; //gán height: auto để mở
+            } else {
+                header.style.height = null; //gán height:46px để đóng
+            }
+        }
+        //Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('.nav li a[href*="#"]'); //lấy ra các thẻ a thỏa mãn điều kiện
+        // console.log(menuItems);
+        for (var i = 0; i < menuItems.length; i++) {
+
+
+
+            var menuItem = menuItems[i];
+            menuItem.onclick = function (event) {
+
+
+                header.style.height = null; //đóng menu
+
+
+
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
